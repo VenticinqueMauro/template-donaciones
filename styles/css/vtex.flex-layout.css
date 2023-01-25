@@ -1,0 +1,241 @@
+.flexRowContent--menu-link,
+.flexRowContent--main-header {
+  padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 40em) {
+  .flexRowContent--menu-link,
+  .flexRowContent--main-header {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .flexRowContent--menu-link,
+  .flexRowContent--main-header {
+    padding: 0 0.25rem;
+  }
+}
+
+.flexRowContent--menu-link {
+  background-color: #03044e;
+  color: #fff;
+}
+
+.flexRowContent--main-header {
+  /* background-color: #f0f0f0; */
+  background-color: #ffffff;
+}
+
+.flexRowContent--main-header-mobile {
+  align-items: center;
+  padding: 0.625rem 0.5rem;
+  background-color: #f0f0f0;
+}
+
+.flexRowContent--menu-link :global(.vtex-menu-2-x-styledLink) {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.flexRowContent--main-header :global(.vtex-menu-2-x-styledLink) {
+  color: #727273;
+  font-size: 14px;
+}
+
+.flexRow--deals {
+  background-color: #0F3E99;
+  padding: 14px 0px;
+}
+
+.flexRow--deals .stretchChildrenWidth {
+  align-items: center;
+}
+
+.flexRow--deals .flexCol {
+  align-items: center;
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+
+.flexCol--filterCol {
+  max-width: 500px;
+  min-width: 230px;
+}
+
+.flexCol--productCountCol {
+  align-items: flex-start;
+}
+
+.flexCol--orderByCol {
+  align-items: flex-end;
+}
+
+.flexCol--orderByMobileCol {
+  width: 42%;
+}
+
+.flexCol--filterMobileCol {
+  width: 38%;
+}
+
+.flexRow--quickviewMainRow {
+  display: flex;
+  max-height: 100%;
+}
+
+.flexColChild--quickviewDetails:first-child {
+  overflow-y: auto;
+  height: 66% !important;
+  overflow-x: hidden;
+}
+
+.flexColChild--quickviewDetails:last-child {
+  height: 34% !important;
+}
+
+.flexRow--addToCartRow {
+  padding-bottom: 1rem;
+}
+
+/* =============================== Influencers ============================== */
+
+.flexRow--topBar{
+  background-color:#022b60;
+  height:auto;
+}
+
+.flexRow--div-datos {
+  background-color: #fff;
+}
+
+.flexCol--div-datos-col-1 {
+  height:300px;
+  /* background-color: #BBB; */
+}
+
+.flexColChild--div-datos-col-1 {
+  display: flex; 
+  flex-direction: row;
+  justify-content: right; /* Desktop: right - Mobile: center */
+  align-items: center;
+}
+
+.flexCol--div-datos-col-2 {
+  /* background-color: gray; */
+}
+
+.flexRow--div-datos-col-2-row-1{
+  /* background-color:pink; */
+  height:100px;
+}
+
+/* .flexRow--div-datos-col-2-row-2{ */
+  /* background-color:green; */
+  /* height:150px; */
+/* } */
+
+.flexCol--div-datos-col-2-row-2-col{
+  /* background-color:green; */
+  padding:10px;
+  height:200px;
+}
+
+.flexColChild--div-datos-col-2-row-2-col{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+
+.flexCol--div-datos-col-2-row-1-col-1 {
+  /* background-color:red; */
+  height:100px;
+}
+
+.flexColChild--div-datos-col-2-row-1-col-1 {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.flexCol--div-datos-col-2-row-1-col-2 {
+  /* background-color:green; */
+  height:100px;
+}
+
+.flexColChild--div-datos-col-2-row-1-col-2 {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.flexCol--div-datos-col-2-row-1-col-3 {
+  /* background-color:blue; */
+  height:100px;
+}
+
+.flexColChild--div-datos-col-2-row-1-col-3 {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.flexCol--shelf-01-col-1 {
+  /* background-color:cadetblue; */
+  padding:10px;
+  height:auto;
+}
+
+.flexColChild--shelf-01-col-1 {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.flexCol--shelf-01-col-2 {
+  background-color:lightgray;
+  padding:10px;
+  height:auto;
+}
+
+/* .flexRowChild--comercial { */
+  /* display:flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+
+/* } */
+
+
+/* .flexRow--comercial { */
+  /* padding-top:10px; */
+  /* padding-bottom:10px; */
+  /* background-color: #0F3E99; */
+  /* padding: 14px 0px; */
+/* } */
+
+/* .flexCol--comercial { */
+  /* background-color: red; */
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
+  /* padding:20px; */
+/* } */
+
+.flexCol--comercial {
+  /* background-color:orange; */
+}
+
+.flexColChild--comercial {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* ========================================================================== */

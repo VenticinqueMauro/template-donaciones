@@ -1,0 +1,193 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "title":"Headers",
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "title": "Header - Desktop",
+    "children": ["flex-layout.row#top-bar", "sticky-layout#4-desktop"]
+  },
+
+  /* ================================= Top Bar ================================ */
+  // Hacer acá directamente la barra nueva, después eliminar la que viene por default
+
+  "flex-layout.row#top-bar": {
+    "children": ["flex-layout.col#top-bar"],
+    "props": {
+      "fullWidth": true,
+      "blockClass": "topBar"
+    }
+  },
+
+  "flex-layout.col#top-bar": {
+    "title":"TopBar",
+    "children": ["rich-text#top-bar"],
+    "props": {
+      "fullWidth": true
+    }
+  },
+
+  "rich-text#top-bar": {
+    "title":"Texto TopBar",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "6 Cuotas sin Interés",
+      "blockClass": "topBarText"
+    }
+  },
+  /* ========================================================================== */
+
+  "flex-layout.row#1-desktop": {
+    "children": ["telemarketing"],
+    "props": {
+      "fullWidth": true
+    }
+  },
+
+  "flex-layout.row#3-desktop": {
+    "props": {
+      "blockClass": "menu-link",
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "vtex.menu@2.x:menu#websites",
+      "flex-layout.col#spacer",
+      "vtex.menu@2.x:menu#institutional"
+    ]
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "sticky-layout#4-desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#4-desktop"]
+  },
+  
+  "flex-layout.row#4-desktop": {
+    "props": {
+      "blockClass": "main-header",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#search-bar",
+      "flex-layout.col#login",
+      "flex-layout.col#cart"
+    ]
+  },
+
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "width":"20%",
+      "horizontalAlign": "center",
+      "blockClass":"logo-col",
+      "verticalAlign": "middle"
+    },
+    "children": ["logo#desktop"]
+  },
+  "flex-layout.col#search-bar": {
+    "props": {
+      // "width":"60%",
+      "blockClass":"search-bar-col",
+      "verticalAlign": "middle"//,
+      // "fullWidth": true
+    },
+    "children": ["search-bar"]
+  },
+  "flex-layout.col#login": {
+    "props": {
+      "width":"10%",
+      "horizontalAlign": "center",
+      "blockClass":"login-col",
+      "verticalAlign": "middle"
+    },
+    "children": ["login"]
+  },
+  "flex-layout.col#cart": {
+    "props": {
+      "width":"10%",
+      "horizontalAlign": "center",
+      "blockClass":"cart-col",
+      "verticalAlign": "middle"
+    },
+    "children": ["minicart.v2"]
+  },
+
+
+  "flex-layout.col#category-menu": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["vtex.menu@2.x:menu#category-menu"]
+  },
+
+  "logo#desktop": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+      "width": "auto",
+      "height": "80"
+    }
+  },
+  "header-layout.mobile": {
+    "title": "Header - Mobile",
+    "children": ["flex-layout.row#top-bar", 
+                "sticky-layout#1-mobile"]
+  },
+  "sticky-layout#1-mobile": {
+    "children": ["flex-layout.row#1-mobile"]
+  },
+  "flex-layout.row#1-mobile": {
+    "children": [
+      // "drawer",
+      "logo#mobile",
+      // "flex-layout.col#spacer",
+      "login",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": ["menu#drawer"]
+  },
+
+  "menu#drawer": {
+    "children": [
+      "menu-item#category-apparel",
+      "menu-item#category-home",
+      "menu-item#more"
+    ],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+
+  "logo#mobile": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+      "width": "120px",
+      "height": "auto"
+    }
+  }
+}

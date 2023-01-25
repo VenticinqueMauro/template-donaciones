@@ -1,0 +1,639 @@
+{
+  "store.home": {
+    "blocks": [
+      "list-context.image-list#banners-1",
+      "flex-layout.row#div-datos",
+      "flex-layout.row#shelf-01",
+      "flex-layout.row#shelf-02",
+      "list-context.image-list#banners-2",
+      "flex-layout.row#comercial",
+      "flex-layout.row#shelf-03",
+      "flex-layout.row#shelf-04",
+      "flex-layout.row#shelf-marcas"//,          /* Slider marcas */
+
+      // "flex-layout.row#shelf-01"
+      /* You can make references to blocks defined in other files.
+       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
+      // "__fold__",
+      // "info-card#home",
+      // "rich-text#question",
+      // "rich-text#link",
+      // "newsletter"
+    ]
+  },
+
+  /* =============================== Banners #1 =============================== */
+  
+  "list-context.image-list#banners-1": {
+    "title":"Banners #1",
+    "children": ["slider-layout#banners-1"],
+    "props": {
+      "preload": true,
+      "images": [
+        {
+          "image": "https://ameriedie.vteximg.com.br/arquivos/ids/155399",
+          "mobileImage": "https://ameriedie.vteximg.com.br/arquivos/ids/155401"
+        }
+      ]
+    }
+  },
+  "slider-layout#banners-1": {
+    "title":"Banners #1 - Slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    }
+  },
+
+  /* ========================================================================== */
+
+  /* =============================== Banners #2 =============================== */
+  
+   "list-context.image-list#banners-2": {
+    "title":"Banners #2",
+    "children": ["slider-layout#banners-2"],
+    "props": {
+      "height": "auto",
+      "preload": true,
+      "images": [
+        {
+          "image": "https://ameriedie.vteximg.com.br/arquivos/ids/155398",
+          "mobileImage": "https://ameriedie.vteximg.com.br/arquivos/ids/155402"
+        }
+      ]
+    }
+  },
+  "slider-layout#banners-2": {
+    "title":"Banners #2 - Slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    }
+  },
+
+  /* ========================================================================== */
+
+  /* ================================ Div Datos =============================== */
+  /* Row datos Influencer  */
+  "flex-layout.row#div-datos":{
+      "title":"Datos Influencer",
+      "props" : {
+        "blockClass": "div-datos"
+      },
+      "children" : [
+        "flex-layout.col#div-datos-col-1",
+        "flex-layout.col#div-datos-col-2"
+      ]
+  },
+
+  "flex-layout.col#div-datos-col-1":{
+    "props" : {
+      "width":"25%",
+      "blockClass": "div-datos-col-1"
+    },
+    "children":[
+      "image#influencer-profile-pic"    
+    ]
+  },
+  
+  "image#influencer-profile-pic": {
+    "title":"Imagen de Perfil Influencer",
+    "props": {
+      "blockClass": "influencer-profile-pic",
+      "src": "https://ameriedie.vtexassets.com/arquivos/ids/155400"
+    }
+  },
+
+  "flex-layout.col#div-datos-col-2":{
+    "props" : {
+      "width":"75%",
+      "blockClass": "div-datos-col-2"
+    },
+    "children":[
+      "flex-layout.row#div-datos-col-2-row-1",
+      "flex-layout.row#div-datos-col-2-row-2"
+    ]
+  },
+  "flex-layout.row#div-datos-col-2-row-1":{
+    "props" : {
+      "blockClass": "div-datos-col-2-row-1"
+    },
+    "children":[
+      "flex-layout.col#div-datos-col-2-row-1-col-1",
+      "flex-layout.col#div-datos-col-2-row-1-col-2",
+      "flex-layout.col#div-datos-col-2-row-1-col-3"
+    ]
+  },
+
+  "flex-layout.row#div-datos-col-2-row-2":{
+  "props" : {
+    "blockClass": "div-datos-col-2-row-2"
+    },
+    "children":[
+      "flex-layout.col#div-datos-col-2-row-2-col"
+    ]
+  },
+  
+  "flex-layout.col#div-datos-col-2-row-2-col":{
+  "props" : {
+    "blockClass": "div-datos-col-2-row-2-col"
+    },
+    "children":[
+      "rich-text#influencer-bio"
+    ]
+  },
+
+  "flex-layout.col#div-datos-col-2-row-1-col-1":{
+    "props" : {
+      // "width":"30%",
+      "blockClass": "div-datos-col-2-row-1-col-1"
+    },
+    "children":[
+      "rich-text#influencer-name"
+    ]
+  },
+
+  "rich-text#influencer-name": {
+    "title":"Nombre Influencer",
+    "props": {
+      "text": "**Stephanie Demner**",
+      "blockClass": "div-datos-influencer"
+    }
+  },
+
+  "flex-layout.col#div-datos-col-2-row-1-col-2":{
+    "props" : {
+      "blockClass": "div-datos-col-2-row-1-col-2"
+    },
+    "children":[
+      "rich-text#influencer-followers"
+    ]
+  },
+
+  "rich-text#influencer-followers": {
+    "title":"Seguidores Influencer",
+    "props": {
+      "text": "**1,4 M** seguidores",
+      "blockClass": "div-datos-influencer"
+    }
+  },
+
+  "flex-layout.col#div-datos-col-2-row-1-col-3":{
+    "props" : {
+      "blockClass": "div-datos-col-2-row-1-col-3"
+    },
+    "children":[
+      "rich-text#influencer-following"
+    ]
+  },
+
+  "rich-text#influencer-following": {
+    "title":"Seguidos Influencer",
+    "props": {
+      "text": "**2707** seguidos",
+      "blockClass": "div-datos-influencer"
+    }
+  },
+
+  "rich-text#influencer-bio": {
+    "title":"Bio Influencer",
+    "props": {
+      "text": "Modelo, emprendedora y mamá de [@arianna.pellademner](#)\nBrandAmbassador [@theofficialpandora](#) [@chiaraferragnibrand](#) [@sweetvictorian](#) [@depilifeargentina](#)",
+      "blockClass": "div-datos-influencer-bio"
+    }
+  },
+
+
+  /* ========================================================================== */
+
+  /* ================================ Shelf #1 ================================ */
+
+  "flex-layout.row#shelf-01":{
+    "title":"Shelf",
+    "props" : {
+      "blockClass": "shelf-01"
+    },
+    "children" : [
+      "flex-layout.col#shelf-01-col-1",
+      "flex-layout.col#shelf-01-col-2"
+    ]
+  },
+  
+  "flex-layout.col#shelf-01-col-1":{
+    "title":"Shelf#1 - Banner",
+    "props" : {
+      "width":"25%",
+      "blockClass": "shelf-01-col-1"
+    },
+    "children" : [
+      "image#shelf-01-col-01"
+    ]
+  },
+
+  "image#shelf-01-col-01": {
+    "title":"Imagen Shelf #1",
+    "props": {
+      "src": "https://ameriedie.vtexassets.com/arquivos/ids/155408"
+    }
+  },
+
+  "flex-layout.col#shelf-01-col-2":{
+    "title":"Shelf#2 - Productos",
+    "props" : {
+      "width":"75%",
+      "blockClass": "shelf-01-col-2"
+    },
+    "children" : [
+      "rich-text#shelf-01-title"
+    ]
+  },
+
+  
+  
+
+
+  /* ========================================================================== */
+
+  /* ================================ Shelf #2 ================================ */
+  
+  "flex-layout.row#shelf-02":{
+    "title":"Shelf",
+    "props" : {
+      "blockClass": "shelf-01"
+    },
+    "children" : [
+      "flex-layout.col#shelf-02-col-2",
+      "flex-layout.col#shelf-02-col-1"
+    ]
+  },
+  
+  "flex-layout.col#shelf-02-col-1":{
+    "title":"Shelf#1 - Banner",
+    "props" : {
+      "width":"25%",
+      "blockClass": "shelf-01-col-1"
+    },
+    "children" : [
+      "image#shelf-02-col-01"
+    ]
+  },
+
+  "image#shelf-02-col-01": {
+    "title":"Imagen Shelf #1",
+    "props": {
+      "src": "https://ameriedie.vtexassets.com/arquivos/ids/155409"
+    }
+  },
+
+  "flex-layout.col#shelf-02-col-2":{
+    "title":"Shelf#2 - Productos",
+    "props" : {
+      "width":"75%",
+      "blockClass": "shelf-01-col-2"
+    },
+    "children" : [
+      "rich-text#shelf-01-title"
+    ]
+  },
+
+  /* ========================================================================== */
+
+  /* ================================ Shelf #3 ================================ */
+
+  "flex-layout.row#shelf-03":{
+    "title":"Shelf",
+    "props" : {
+      "blockClass": "shelf-01"
+    },
+    "children" : [
+      "flex-layout.col#shelf-03-col-1",
+      "flex-layout.col#shelf-03-col-2"
+    ]
+  },
+  
+  "flex-layout.col#shelf-03-col-1":{
+    "title":"Shelf#3 - Banner",
+    "props" : {
+      "width":"25%",
+      "blockClass": "shelf-03-col-1"
+    },
+    "children" : [
+      "image#shelf-03-col-01"
+    ]
+  },
+
+  "image#shelf-03-col-01": {
+    "title":"Imagen Shelf #1",
+    "props": {
+      "src": "https://ameriedie.vtexassets.com/arquivos/ids/155410"
+    }
+  },
+
+  "flex-layout.col#shelf-03-col-2":{
+    "title":"Shelf#2 - Productos",
+    "props" : {
+      "width":"75%",
+      "blockClass": "shelf-01-col-2"
+    },
+    "children" : [
+      "rich-text#shelf-01-title"
+    ]
+  },
+
+/* ========================================================================== */
+
+/* ================================ Shelf #4 ================================ */
+
+"flex-layout.row#shelf-04":{
+  "title":"Shelf",
+  "props" : {
+    "blockClass": "shelf-01"
+  },
+  "children" : [
+    "flex-layout.col#shelf-04-col-2",
+    "flex-layout.col#shelf-04-col-1"
+  ]
+},
+
+"flex-layout.col#shelf-04-col-1":{
+  "title":"Shelf#3 - Banner",
+  "props" : {
+    "width":"25%",
+    "blockClass": "shelf-04-col-1"
+  },
+  "children" : [
+    "image#shelf-04-col-01"
+  ]
+},
+
+"image#shelf-04-col-01": {
+  "title":"Imagen Shelf #1",
+  "props": {
+    "src": "https://ameriedie.vtexassets.com/arquivos/ids/155412"
+  }
+},
+
+"flex-layout.col#shelf-04-col-2":{
+  "title":"Shelf#2 - Productos",
+  "props" : {
+    "width":"75%",
+    "blockClass": "shelf-01-col-2"
+  },
+  "children" : [
+    "rich-text#shelf-01-title"
+  ]
+},
+
+/* ========================================================================== */  
+
+/* ================================ Comercial =============================== */
+
+"flex-layout.row#comercial":{
+  "title":"Shelf",
+  "props" : {
+    "blockClass": "comercial"
+  },
+  "children" : [
+    "flex-layout.col#comercial-col-1",
+    "flex-layout.col#comercial-col-2",
+    "flex-layout.col#comercial-col-3"
+  ]
+},
+
+"flex-layout.col#comercial-col-1":{
+  "title":"Shelf#3 - Banner",
+  "props" : {
+    "width":"33%",
+    "blockClass": "comercial"
+  },
+  "children" : [
+    "image#comercial-col-01"
+  ]
+},
+
+"flex-layout.col#comercial-col-2":{
+  "title":"Shelf#3 - Banner",
+  "props" : {
+    "width":"33%",
+    "blockClass": "comercial"
+  },
+  "children" : [
+    "image#comercial-col-02"
+  ]
+},
+
+"flex-layout.col#comercial-col-3":{
+  "title":"Shelf#3 - Banner",
+  "props" : {
+    "width":"33%",
+    "blockClass": "comercial"
+  },
+  "children" : [
+    "image#comercial-col-03"
+  ]
+},
+
+"image#comercial-col-01": {
+  "title":"Imagen Comercial #1",
+  "props": {
+    "blockClass": "comercial-01",
+    "src": "https://ameriedie.vtexassets.com/arquivos/ids/155410"
+  }
+},
+
+"image#comercial-col-02": {
+  "title":"Imagen Comercial #2",
+  "props": {
+    "blockClass": "comercial-02",
+    "src": "https://ameriedie.vtexassets.com/arquivos/ids/155410"
+  }
+},
+
+"image#comercial-col-03": {
+  "title":"Imagen Comercial #3",
+  "props": {
+    "blockClass": "comercial-03",
+    "src": "https://ameriedie.vtexassets.com/arquivos/ids/155410"
+  }
+},
+
+/* ========================================================================== */  
+
+/* ========================== Carrousel marcas ========================== */
+
+"flex-layout.row#shelf-marcas": {
+  "title":"Vitrina marcas",
+  "props": {
+    "blockClass": "shelf-marcas"
+  },
+  "children": ["flex-layout.col#shelf-marcas"]
+},
+
+"flex-layout.col#shelf-marcas": {
+  "title":"Vitrina marcas",
+  "props": {
+    "preventVerticalStretch": true//,
+    // "blockClass": "shelf-marcas"
+  },
+  "children": ["list-context.image-list#slider-marcas"]
+},
+
+"list-context.image-list#slider-marcas": {
+  "title":"Vitrina marcas - Carrusel",
+  "children": ["rich-text#shelf-marcas",
+               "slider-layout#shelf-products-slide-marcas"],
+  "props": {
+    "blockClass":"slider-marcas",
+    "images": [
+      {
+        "image": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "mobileImage": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "description": "Ameridie",
+        "link": {
+          "url": "#",
+          "title": "Ameridie"
+        }
+      },
+      {
+        "image": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "mobileImage": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "description": "Ameridie",
+        "link": {
+          "url": "#",
+          "title": "Ameridie"
+        }
+      },
+      {
+        "image": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "mobileImage": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "description": "Ameridie",
+        "link": {
+          "url": "#",
+          "title": "Ameridie"
+        }
+      },
+      {
+        "image": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "mobileImage": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "description": "Ameridie",
+        "link": {
+          "url": "#",
+          "title": "Ameridie"
+        }
+      },
+      {
+        "image": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "mobileImage": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "description": "Ameridie",
+        "link": {
+          "url": "#",
+          "title": "Ameridie"
+        }
+      }
+    ]
+  }
+},
+
+"rich-text#shelf-marcas": {
+  "title":"Vitrina marcas - Título",
+  "props": {
+    "textAlignment": "LEFT",
+    "textPosition": "LEFT",
+    "text": "Marcas",
+    "textColor": "black",
+    "font": "t-heading-5",
+    "blockClass": "shelf-marcas"
+  }
+},
+
+"slider-layout#shelf-products-slide-marcas": {
+  "title":"Vitrina marcas - Slider",
+  "props": {
+    "blockClass": ["marcas-slide"],
+    "itemsPerPage": {
+    "desktop": 5,
+    "tablet": 5,
+    "phone": 3
+    },
+    "infinite": true,
+    "showNavigationArrows": "always",
+    "showPaginationDots": "always",
+    "autoplay": {
+      "timeout": 3000
+    }
+ 
+  }
+},
+
+/* ========================================================================== */
+
+
+  "rich-text#shelf-01-title": {
+    "props": {
+      "text": "## Skin Care",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "flex-layout.row#shelf": {
+    "children": ["list-context.product-list#demo1"]
+  },
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+
+  "info-card#home": {
+    "props": {
+      "id": "info-card-home",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+      "headline": "Clearance Sale",
+      "callToActionText": "DISCOVER",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "info-card-home",
+      "textAlignment": "center"
+    }
+  },
+
+  "rich-text#question": {
+    "props": {
+      "text": "**This is an example store built using the VTEX platform.\nWant to know more?**",
+      "blockClass": "question"
+    }
+  },
+
+  "rich-text#link": {
+    "props": {
+      "text": "\n**Reach us at**\nwww.vtex.com.br",
+      "blockClass": "link"
+    }
+  }
+}
