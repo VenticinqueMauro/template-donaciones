@@ -105,90 +105,158 @@
   height:auto;
 }
 
-.flexRow--div-datos {
-  background-color: #fff;
-}
+/* Div Datos (Desktop) */
+  .flexRow--div-datos {
+    background-color: #fff;
+  }
 
-.flexCol--div-datos-col-1 {
-  height:300px;
-  /* background-color: #BBB; */
-}
+  .flexCol--div-datos-col-1 {
+    height:300px;
+    /* background-color: #BBB; */
+  }
 
-.flexColChild--div-datos-col-1 {
-  display: flex; 
-  flex-direction: row;
-  justify-content: right; /* Desktop: right - Mobile: center */
-  align-items: center;
-}
+  .flexColChild--div-datos-col-1 {
+    display: flex; 
+    flex-direction: row;
+    justify-content: right; /* Desktop: right - Mobile: center */
+    align-items: center;
+  }
 
-.flexCol--div-datos-col-2 {
-  /* background-color: gray; */
-}
+  .flexCol--div-datos-col-2 {
+    /* background-color: gray; */
+  }
 
-.flexRow--div-datos-col-2-row-1{
-  /* background-color:pink; */
-  height:100px;
-}
+  .flexRow--div-datos-col-2-row-1{
+    /* background-color:pink; */
+    height:100px;
+  }
 
-/* .flexRow--div-datos-col-2-row-2{ */
-  /* background-color:green; */
-  /* height:150px; */
-/* } */
+  .flexCol--div-datos-col-2-row-2-col{
+    /* background-color:green; */
+    padding:10px;
+    height:200px;
+  }
 
-.flexCol--div-datos-col-2-row-2-col{
-  /* background-color:green; */
-  padding:10px;
-  height:200px;
-}
-
-.flexColChild--div-datos-col-2-row-2-col{
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-}
+  .flexColChild--div-datos-col-2-row-2-col{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
 
 
-.flexCol--div-datos-col-2-row-1-col-1 {
-  /* background-color:red; */
-  height:100px;
-}
+  .flexCol--div-datos-col-2-row-1-col-1 {
+    /* background-color:red; */
+    height:100px;
+  }
 
-.flexColChild--div-datos-col-2-row-1-col-1 {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-}
+  .flexColChild--div-datos-col-2-row-1-col-1 {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
 
-.flexCol--div-datos-col-2-row-1-col-2 {
-  /* background-color:green; */
-  height:100px;
-}
+  .flexCol--div-datos-col-2-row-1-col-2 {
+    /* background-color:green; */
+    height:100px;
+  }
 
-.flexColChild--div-datos-col-2-row-1-col-2 {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-}
+  .flexColChild--div-datos-col-2-row-1-col-2 {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
 
-.flexCol--div-datos-col-2-row-1-col-3 {
-  /* background-color:blue; */
-  height:100px;
-}
+  .flexCol--div-datos-col-2-row-1-col-3 {
+    /* background-color:blue; */
+    height:auto;
+  }
 
-.flexColChild--div-datos-col-2-row-1-col-3 {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-}
+  .flexColChild--div-datos-col-2-row-1-col-3 {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+    /* Div Datos (Mobile) */
+    .flexRow--div-datos-mobile {
+      background-color: #fff;
+    }
+    
+    .flexCol--div-datos-col-1-mobile {
+      height:260px;
+      /* background-color: #BBB; */
+    }
+    
+    .flexColChild--div-datos-col-1-mobile {
+      display: flex; 
+      flex-direction: row;
+      justify-content: center; /* Desktop: right - Mobile: center */
+      align-items: center;
+    }
+    
+    .flexCol--div-datos-col-2-mobile {
+      background-color: gray;
+    }
+    
+    .flexRow--div-datos-col-2-row-1-mobile{
+      /* background-color:pink; */
+      height:auto;
+    }
+    
+    .flexCol--div-datos-col-2-row-2-col-mobile{
+      /* background-color:green; */
+      padding-bottom:0px;
+      height:auto;
+      text-align:center;
+    }
+    
+    .flexColChild--div-datos-col-2-row-2-col-mobile{
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .flexCol--div-datos-col-2-row-1-col-1-mobile {
+      height:auto;
+    }
+    
+    .flexColChild--div-datos-col-2-row-1-col-1-mobile {
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    
+    .flexColChild--div-datos-col-2-row-1-col-2-mobile {
+      /* background-color:red; */
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    
+    .flexCol--div-datos-col-2-row-1-col-3-mobile {
+      height:auto;
+    }
+    
+    .flexColChild--div-datos-col-2-row-1-col-3-mobile {
+      /* background-color:cyan; */
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+    }
 
 .flexCol--shelf-01-col-1 {
-  /* background-color:cadetblue; */
-  padding:10px;
+  /* background-color:#EEE; */
+  /* padding:10px; */
   height:auto;
 }
 
@@ -196,36 +264,20 @@
   display:flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .flexCol--shelf-01-col-2 {
-  background-color:lightgray;
-  padding:10px;
+  /* background-color:#EEE; */
   height:auto;
 }
 
-/* .flexRowChild--comercial { */
-  /* display:flex; */
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
-
-/* } */
-
-
-/* .flexRow--comercial { */
-  /* padding-top:10px; */
-  /* padding-bottom:10px; */
-  /* background-color: #0F3E99; */
-  /* padding: 14px 0px; */
-/* } */
-
-/* .flexCol--comercial { */
-  /* background-color: red; */
-  /* padding-left: 20px; */
-  /* padding-right: 20px; */
-  /* padding:20px; */
-/* } */
+.flexColChild--shelf-01-col-2 {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
 .flexCol--comercial {
   /* background-color:orange; */
@@ -237,5 +289,32 @@
   justify-content: center;
   align-items: flex-end;
 }
+
+.flexRow--shelf-marcas {
+  /* background-color:gray; */
+  padding:20px;
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+.flexRow--shelf-marcas-mobile {
+  /* background-color:gray; */
+  padding:20px;
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+.listPrice--summary {
+  justify-content:center;
+  /* background-color:red; */
+  color:#ed5395;
+}
+
+.flexRowContent--selling-price {
+  justify-content:center;
+  color:#ed5395;
+}
+
+
 
 /* ========================================================================== */

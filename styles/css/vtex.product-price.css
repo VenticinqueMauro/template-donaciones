@@ -27,7 +27,8 @@
 .sellingPriceValue--summary {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #2E2E2E;
+  /* color: #2E2E2E; */
+  color:#ed5395;
 }
 
 .savings--summary {
@@ -56,11 +57,14 @@
 .listPrice--summary {
   margin-bottom: 0.25rem;
   font-size: .875rem;
+  text-align:center !important;
+  /* color:#ed5395; */
 }
 
 .installments--summary {
   margin-bottom: 2rem;
   font-size: 0.875rem;
+  text-align: center;
 }
 
 .savings--summaryPercentage {

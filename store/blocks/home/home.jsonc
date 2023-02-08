@@ -1,24 +1,40 @@
 {
   "store.home": {
-    "blocks": [
+    "blocks":[      
+      "responsive-layout.desktop",
+      "responsive-layout.phone"
+    ]
+  },
+  
+  "responsive-layout.desktop": {
+    "title":"Diseño Desktop",
+    "children": [
       "list-context.image-list#banners-1",
-      "flex-layout.row#div-datos",
+      "flex-layout.row#div-datos-desktop",
       "flex-layout.row#shelf-01",
       "flex-layout.row#shelf-02",
       "list-context.image-list#banners-2",
       "flex-layout.row#comercial",
       "flex-layout.row#shelf-03",
       "flex-layout.row#shelf-04",
-      "flex-layout.row#shelf-marcas"//,          /* Slider marcas */
+      "flex-layout.row#shelf-marcas",
+      "newsletter"
+    ]
+  },
 
-      // "flex-layout.row#shelf-01"
-      /* You can make references to blocks defined in other files.
-       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
-      // "__fold__",
-      // "info-card#home",
-      // "rich-text#question",
-      // "rich-text#link",
-      // "newsletter"
+  "responsive-layout.phone": {
+    "title":"Diseño Mobile",
+    "children": [
+      "list-context.image-list#banners-1",
+      "flex-layout.row#div-datos-mobile",
+      "flex-layout.row#shelf-01",
+      "flex-layout.row#shelf-02",
+      "list-context.image-list#banners-2",
+      "flex-layout.row#comercial",
+      "flex-layout.row#shelf-03",
+      "flex-layout.row#shelf-04",
+      "flex-layout.row#shelf-marcas-mobile",
+      "newsletter"
     ]
   },
 
@@ -50,7 +66,7 @@
       "blockClass": "carousel"
     }
   },
-
+  
   /* ========================================================================== */
 
   /* =============================== Banners #2 =============================== */
@@ -85,9 +101,10 @@
 
   /* ========================================================================== */
 
-  /* ================================ Div Datos =============================== */
+  /* =========================== Div Datos (Desktop) ========================== */
+
   /* Row datos Influencer  */
-  "flex-layout.row#div-datos":{
+  "flex-layout.row#div-datos-desktop":{
       "title":"Datos Influencer",
       "props" : {
         "blockClass": "div-datos"
@@ -210,18 +227,154 @@
   "rich-text#influencer-bio": {
     "title":"Bio Influencer",
     "props": {
-      "text": "Modelo, emprendedora y mamá de [@arianna.pellademner](#)\nBrandAmbassador [@theofficialpandora](#) [@chiaraferragnibrand](#) [@sweetvictorian](#) [@depilifeargentina](#)",
+      "text": "Modelo, emprendedora y mamá de [@arianna.pellademner](https://www.instagram.com/arianna.pellademner)\nBrandAmbassador [@theofficialpandora](https://www.instagram.com/theofficialpandora) [@chiaraferragnibrand](https://www.instagram.com/chiaraferragnibrand) [@sweetvictorian](https://www.instagram.com/sweetvictorian) [@depilifeargentina](https://www.instagram.com/depilifeargentina)",
       "blockClass": "div-datos-influencer-bio"
     }
   },
 
+  /* ========================================================================== */
+
+  /* =========================== Div Datos (Mobile) =========================== */
+
+  /* Row datos Influencer  */
+  "flex-layout.row#div-datos-mobile":{
+    "title":"Datos Influencer",
+    "props" : {
+      "blockClass": "div-datos"
+    },
+    "children" : [
+      "flex-layout.col#div-datos-rows-containers-mobile"
+      ]
+  },
+
+  "flex-layout.col#div-datos-rows-containers-mobile":{
+    "children": [
+      "flex-layout.row#div-datos-row-1-mobile",
+      "flex-layout.row#div-datos-row-2-mobile",
+      "flex-layout.row#div-datos-row-3-mobile",
+      "flex-layout.row#div-datos-row-4-mobile"
+    ]
+
+  },
+
+  "flex-layout.row#div-datos-row-1-mobile":{
+    "children": [
+      "flex-layout.col#div-datos-imagen-mobile"
+    ]
+  },
+
+  "flex-layout.row#div-datos-row-2-mobile":{
+    "children": [
+      "flex-layout.col#div-datos-nombre-influencer-mobile"
+    ]
+  },
+
+  "flex-layout.row#div-datos-row-3-mobile":{
+    "children": [
+      "flex-layout.col#div-datos-bio-influencer-mobile"
+    ]
+  },
+
+  "flex-layout.row#div-datos-row-4-mobile":{
+    "children": [
+      "flex-layout.col#div-datos-followers-influencer-mobile",
+      "flex-layout.col#div-datos-following-influencer-mobile"
+    ]
+  },
+
+  "flex-layout.col#div-datos-imagen-mobile":{
+    "props" : {
+      "blockClass": "div-datos-col-1-mobile"
+    },
+    "children":[
+      "image#influencer-profile-pic-mobile"    
+    ]
+  },
+
+  "image#influencer-profile-pic-mobile": {
+    "title":"Imagen de Perfil Influencer",
+    "props": {
+      "blockClass": "influencer-profile-pic-mobile",
+      "src": "https://ameriedie.vtexassets.com/arquivos/ids/155400"
+    }
+  },
+
+  "flex-layout.col#div-datos-bio-influencer-mobile":{
+  "props" : {
+    "blockClass": "div-datos-col-2-row-2-col-mobile"
+    },
+    "children":[
+      "rich-text#influencer-bio-mobile"
+    ]
+  },
+
+  "flex-layout.col#div-datos-nombre-influencer-mobile":{
+    "props" : {
+      "blockClass": "div-datos-col-2-row-1-col-1-mobile"
+    },
+    "children":[
+      "rich-text#influencer-name-mobile"
+    ]
+  },
+
+  "rich-text#influencer-name-mobile": {
+    "title":"Nombre Influencer",
+    "props": {
+      "text": "**Stephanie Demner**",
+      "blockClass": "div-datos-influencer-mobile"
+    }
+  },
+
+  "flex-layout.col#div-datos-followers-influencer-mobile":{
+    "props" : {
+      "width":"50%",
+      "blockClass": "div-datos-col-2-row-1-col-2-mobile"
+    },
+    "children":[
+      "rich-text#influencer-followers-mobile"
+    ]
+  },
+
+  "rich-text#influencer-followers-mobile": {
+    "title":"Seguidores Influencer",
+    "props": {
+      "text": "**1,4 M** seguidores",
+      "blockClass": "div-datos-influencer-mobile"
+    }
+  },
+
+  "flex-layout.col#div-datos-following-influencer-mobile":{
+    "props" : {
+      "width":"50%",
+      "blockClass": "div-datos-col-2-row-1-col-3-mobile"
+    },
+    "children":[
+      "rich-text#influencer-following-mobile"
+    ]
+  },
+
+  "rich-text#influencer-following-mobile": {
+    "title":"Seguidos Influencer",
+    "props": {
+      "text": "**2707** seguidos",
+      "blockClass": "div-datos-influencer-mobile"
+    }
+  },
+
+  "rich-text#influencer-bio-mobile": {
+    "title":"Bio Influencer",
+    "props": {
+      "text": "Modelo, emprendedora y mamá de [@arianna.pellademner](#)\nBrandAmbassador [@theofficialpandora](#) [@chiaraferragnibrand](#) [@sweetvictorian](#) [@depilifeargentina](#)",
+      "blockClass": "div-datos-influencer-bio-mobile"
+    }
+  },
 
   /* ========================================================================== */
 
   /* ================================ Shelf #1 ================================ */
 
   "flex-layout.row#shelf-01":{
-    "title":"Shelf",
+    "title":"Shelf #1",
     "props" : {
       "blockClass": "shelf-01"
     },
@@ -250,26 +403,52 @@
   },
 
   "flex-layout.col#shelf-01-col-2":{
-    "title":"Shelf#2 - Productos",
+    "title":"Shelf#1 - Productos",
     "props" : {
       "width":"75%",
       "blockClass": "shelf-01-col-2"
     },
     "children" : [
-      "rich-text#shelf-01-title"
+      "rich-text#shelf-01-title",
+      "list-context.product-list#shelf-01"
     ]
   },
 
-  
-  
+  "rich-text#shelf-01-title": {
+    "props": {
+      "text": "## SKIN CARE",
+      "blockClass": "shelfTitle"
+    }
+  },
 
+  "list-context.product-list#shelf-01": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#shelf-01"],
+    "props": {
+      "category":"2",
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#shelf-01": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
 
+  
   /* ========================================================================== */
 
   /* ================================ Shelf #2 ================================ */
   
   "flex-layout.row#shelf-02":{
-    "title":"Shelf",
+    "title":"Shelf #2",
     "props" : {
       "blockClass": "shelf-01"
     },
@@ -304,8 +483,37 @@
       "blockClass": "shelf-01-col-2"
     },
     "children" : [
-      "rich-text#shelf-01-title"
+      "rich-text#shelf-02-title",
+      "list-context.product-list#shelf-02"
     ]
+  },
+
+  "rich-text#shelf-02-title": {
+    "props": {
+      "text": "## BANDOLERAS",
+      "blockClass": "shelfTitle"
+    }
+  },
+
+  "list-context.product-list#shelf-02": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#shelf-02"],
+    "props": {
+      "category":"3",
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#shelf-02": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
   },
 
   /* ========================================================================== */
@@ -313,7 +521,7 @@
   /* ================================ Shelf #3 ================================ */
 
   "flex-layout.row#shelf-03":{
-    "title":"Shelf",
+    "title":"Shelf #3",
     "props" : {
       "blockClass": "shelf-01"
     },
@@ -348,8 +556,37 @@
       "blockClass": "shelf-01-col-2"
     },
     "children" : [
-      "rich-text#shelf-01-title"
+      "rich-text#shelf-03-title",
+      "list-context.product-list#shelf-03"
     ]
+  },
+
+  "rich-text#shelf-03-title": {
+    "props": {
+      "text": "## ROSTRO",
+      "blockClass": "shelfTitle"
+    }
+  },
+
+  "list-context.product-list#shelf-03": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#shelf-03"],
+    "props": {
+      "category":"4",
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#shelf-03": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
   },
 
 /* ========================================================================== */
@@ -357,7 +594,7 @@
 /* ================================ Shelf #4 ================================ */
 
 "flex-layout.row#shelf-04":{
-  "title":"Shelf",
+  "title":"Shelf #4",
   "props" : {
     "blockClass": "shelf-01"
   },
@@ -392,16 +629,47 @@
     "blockClass": "shelf-01-col-2"
   },
   "children" : [
-    "rich-text#shelf-01-title"
+    "rich-text#shelf-04-title",
+    "list-context.product-list#shelf-04"
+
   ]
 },
+
+"rich-text#shelf-04-title": {
+  "props": {
+    "text": "## EM",
+    "blockClass": "shelfTitle"
+  }
+},
+
+"list-context.product-list#shelf-04": {
+  "blocks": ["product-summary.shelf"],
+  "children": ["slider-layout#shelf-04"],
+  "props": {
+    // "category":"3",
+    "orderBy": "OrderByTopSaleDESC"
+  }
+},
+"slider-layout#shelf-04": {
+  "props": {
+    "itemsPerPage": {
+      "desktop": 3,
+      "tablet": 3,
+      "phone": 1
+    },
+    "infinite": true,
+    "fullWidth": false,
+    "blockClass": "shelf"
+  }
+},
+
 
 /* ========================================================================== */  
 
 /* ================================ Comercial =============================== */
 
 "flex-layout.row#comercial":{
-  "title":"Shelf",
+  "title":"Comercial",
   "props" : {
     "blockClass": "comercial"
   },
@@ -449,7 +717,7 @@
   "title":"Imagen Comercial #1",
   "props": {
     "blockClass": "comercial-01",
-    "src": "https://ameriedie.vtexassets.com/arquivos/ids/155410"
+    "src": "https://ameriedie.vtexassets.com/arquivos/ids/155412"
   }
 },
 
@@ -465,13 +733,13 @@
   "title":"Imagen Comercial #3",
   "props": {
     "blockClass": "comercial-03",
-    "src": "https://ameriedie.vtexassets.com/arquivos/ids/155410"
+    "src": "https://ameriedie.vtexassets.com/arquivos/ids/155409"
   }
 },
 
 /* ========================================================================== */  
 
-/* ========================== Carrousel marcas ========================== */
+/* ======================= Carrousel Marcas - Desktop ======================= */
 
 "flex-layout.row#shelf-marcas": {
   "title":"Vitrina marcas",
@@ -492,7 +760,7 @@
 
 "list-context.image-list#slider-marcas": {
   "title":"Vitrina marcas - Carrusel",
-  "children": ["rich-text#shelf-marcas",
+  "children": [//"rich-text#shelf-marcas",
                "slider-layout#shelf-products-slide-marcas"],
   "props": {
     "blockClass":"slider-marcas",
@@ -565,7 +833,7 @@
     "itemsPerPage": {
     "desktop": 5,
     "tablet": 5,
-    "phone": 3
+    "phone": 2
     },
     "infinite": true,
     "showNavigationArrows": "always",
@@ -579,13 +847,98 @@
 
 /* ========================================================================== */
 
+/* ======================== Carrousel Marcas - Mobile ======================= */
 
-  "rich-text#shelf-01-title": {
-    "props": {
-      "text": "## Skin Care",
-      "blockClass": "shelfTitle"
-    }
+"flex-layout.row#shelf-marcas-mobile": {
+  "title":"Vitrina marcas",
+  "props": {
+    "blockClass": "shelf-marcas-mobile"
   },
+  "children": ["flex-layout.col#shelf-marcas-mobile"]
+},
+
+"flex-layout.col#shelf-marcas-mobile": {
+  "title":"Vitrina marcas",
+  "props": {
+    "preventVerticalStretch": true//,
+    // "blockClass": "shelf-marcas"
+  },
+  "children": ["list-context.image-list#slider-marcas-mobile"]
+},
+
+"list-context.image-list#slider-marcas-mobile": {
+  "title":"Vitrina marcas - Carrusel",
+  "children": [//"rich-text#shelf-marcas",
+               "slider-layout#shelf-products-slide-marcas-mobile"],
+  "props": {
+    "blockClass":"slider-marcas-mobile",
+    "images": [
+      {
+        "image": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "mobileImage": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "description": "Ameridie",
+        "link": {
+          "url": "#",
+          "title": "Ameridie"
+        }
+      },
+      {
+        "image": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "mobileImage": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "description": "Ameridie",
+        "link": {
+          "url": "#",
+          "title": "Ameridie"
+        }
+      },
+      {
+        "image": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "mobileImage": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+        "description": "Ameridie",
+        "link": {
+          "url": "#",
+          "title": "Ameridie"
+        }
+      }
+    ]
+  }
+},
+
+"rich-text#shelf-marcas-mobile": {
+  "title":"Vitrina marcas - Título",
+  "props": {
+    "textAlignment": "LEFT",
+    "textPosition": "LEFT",
+    "text": "Marcas",
+    "textColor": "black",
+    "font": "t-heading-5",
+    "blockClass": "shelf-marcas-mobile"
+  }
+},
+
+"slider-layout#shelf-products-slide-marcas-mobile": {
+  "title":"Vitrina marcas - Slider",
+  "props": {
+    "blockClass": ["marcas-slide-mobile"],
+    "itemsPerPage": {
+    "desktop": 5,
+    "tablet": 5,
+    "phone": 3
+    },
+    "infinite": true,
+    "showNavigationArrows": "always",
+    "showPaginationDots": "always",
+    "autoplay": {
+      "timeout": 3000
+    }
+  }
+},
+
+/* ========================================================================== */
+
+
+
+  
   "flex-layout.row#shelf": {
     "children": ["list-context.product-list#demo1"]
   },
@@ -599,7 +952,7 @@
   "slider-layout#demo-products": {
     "props": {
       "itemsPerPage": {
-        "desktop": 4,
+        "desktop": 3,
         "tablet": 3,
         "phone": 1
       },

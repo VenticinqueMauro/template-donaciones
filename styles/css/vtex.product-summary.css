@@ -21,9 +21,11 @@
   justify-content: start;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .brandName {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 18px;
   color: #2E2E2E;
@@ -39,4 +41,14 @@
 
 .image {
   border-radius: 0.25rem;
+}
+
+
+.container--shelf {
+  /* Para ajustar automáticamente el tamaño de los productos en el shelf */
+  height:auto; 
+}
+
+.nameContainer--productName {
+  justify-content: center;
 }

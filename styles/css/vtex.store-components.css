@@ -143,5 +143,18 @@
   margin-bottom:20px;
 }
 
+.imageElement--marcas-slide {
+  /* background-color:red; */
+  /* border: 1px solid red; */
+  max-width:240px;
+}
+
+.imageElement--marcas-slide-mobile {
+  /* background-color:red; */
+  /* border: 1px solid red; */
+  max-width:100px;
+}
+
+
 /* ========================================================================== */
 
