@@ -36,3 +36,7 @@
 .slideChildrenContainer--shelf {
   font-family: 'Montserrat', sans-serif;
 }
+
+.imageElement--footer-logo {
+  width:500px;
+}

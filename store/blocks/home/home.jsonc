@@ -1,13 +1,42 @@
+
 {
+
   "store.home": {
+    "parent": { 
+      "header": "header#header", 
+      "footer": "footer#empty"
+    },
     "blocks":[      
+      "store.custom#{influencer-home}"
+    ]
+  },
+  "store.custom#{influencer-home}": {
+    "blocks": [  
       "responsive-layout.desktop",
+      "responsive-layout.tablet",
       "responsive-layout.phone"
     ]
   },
-  
+
   "responsive-layout.desktop": {
     "title":"Diseño Desktop",
+    "children": [
+      "flex-layout.row#countdown-banner",
+      "list-context.image-list#banners-1",
+      "flex-layout.row#div-datos-desktop",
+      "flex-layout.row#shelf-01",
+      "flex-layout.row#shelf-02",
+      "list-context.image-list#banners-2",
+      "flex-layout.row#comercial",
+      "flex-layout.row#shelf-03",
+      "flex-layout.row#shelf-04",
+      "flex-layout.row#shelf-marcas",
+      "newsletter"
+    ]
+  },
+
+  "responsive-layout.tablet": {
+    "title":"Diseño Tablet",
     "children": [
       "list-context.image-list#banners-1",
       "flex-layout.row#div-datos-desktop",
@@ -37,6 +66,40 @@
       "newsletter"
     ]
   },
+
+  
+  /* ============================ Countdown banner ============================ */
+
+  "flex-layout.row#countdown-banner":{
+      "title":"Countdown Banner",
+      "props" : {
+        "fullWidth":"true",
+        "height": "600px",
+        "blockClass": "countdown-banner"
+      },
+      "children" : [
+        "flex-layout.col#countdown-banner"
+      ]
+    },
+
+  "flex-layout.col#countdown-banner":{
+    "props" : {
+      "blockClass": "countdown-banner"
+    },
+    "children":[
+      "sandbox#countdown-banner"
+    ]
+  },
+
+  "sandbox#countdown-banner": {
+    "props": {
+      "width": "100%",
+      "initialContent": "<div id='countdown-banner' style='background-color:blue;color:white;'></div><script>document.getElementById('countdown-banner').innerHTML = JSON.stringify(window.props);</script>",
+      "allowCookies": false
+    }
+  },
+
+  /* ========================================================================== */
 
   /* =============================== Banners #1 =============================== */
   
@@ -391,8 +454,39 @@
       "blockClass": "shelf-01-col-1"
     },
     "children" : [
-      "image#shelf-01-col-01"
+      "disposition-layout#image-and-video"
     ]
+  },
+
+  "disposition-layout#image-and-video": {
+    "title":"Shelf#1 - Imagen o video",
+    "children": [
+      "image#shelf-01-col-01",
+      "video#shelf-01-col-01"
+    ],
+    "props": {
+      "disposition": [
+        {
+          "order": 1
+        },
+        {
+          "order": 2
+        }
+      ]
+    }
+  },
+
+  "video#shelf-01-col-01": {
+    "title":"Imagen Video #1",
+    "props": {
+      "width": "auto",
+      "height": "466px",
+      "loop": true,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://tecnohs.com.ar/temp-assets/media1-cropped.mp4",
+      "blockClass": "videoEl"
+    }
   },
 
   "image#shelf-01-col-01": {

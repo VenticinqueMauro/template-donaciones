@@ -99,6 +99,8 @@
       "rowGap": 0
     },
     "children": [
+      "flex-layout.row#brand-stock",
+      "product-availability#product-stock",
       "flex-layout.row#product-name",
       "product-rating-summary",
       "flex-layout.row#list-price-savings",
@@ -115,6 +117,32 @@
       "shipping-simulator",
       "share#default"
     ]
+  },
+
+  "flex-layout.row#brand-stock": {
+    "props": {
+      "marginBottom": 3
+    },
+    "children": ["vtex.store-components:product-brand#marca"]
+  },
+
+  "vtex.store-components:product-brand#marca": {
+    "props":{
+      "blockClass":"marca-style"
+    }
+  },
+
+  "rich-text#test-text": {
+    "props": {
+      "text": "**Stephanie Demner**"
+    }
+  },
+
+  "product-availability#product-stock": {
+    "props": {
+      "showAvailability": "stock",
+      "showAvailabilityMessage": "There are {quantity} available!"
+    }
   },
 
   "flex-layout.row#product-name": {

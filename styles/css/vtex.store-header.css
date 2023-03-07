@@ -82,3 +82,9 @@
     transition: none;
   }
 }
+
+.headerRowBackground {
+  display:none; /* Revisar, si no se oculta aparece una suerte de 
+                   segunda barra sobre la primera del home - esto viene
+                   por el lado de crear templates custom */
+}

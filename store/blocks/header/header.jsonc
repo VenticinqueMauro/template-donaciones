@@ -1,19 +1,35 @@
 {
   "header": {
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+    "blocks": ["header-layout.desktop", 
+               "header-layout.mobile"]
   },
   "header.full": {
     "title":"Headers",
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+    "blocks": ["header-layout.desktop", 
+               "header-layout.mobile"]
   },
   "header-layout.desktop": {
     "title": "Header - Desktop",
-    "children": ["flex-layout.row#top-bar", "sticky-layout#4-desktop"]
+    "children": ["flex-layout.row#top-bar", 
+                 "sticky-layout#4-desktop"]
   },
 
-  /* ================================= Top Bar ================================ */
-  // Hacer acá directamente la barra nueva, después eliminar la que viene por default
+  /* ============================== Empty Header ============================== */
+  "header#empty": {
+    "blocks": [
+      "header-layout.desktop#empty",
+      "header-layout.mobile#empty"
+    ]
+  },
+  "header-layout.desktop#empty": {
+    "children": []
+  },
+  "header-layout.mobile#empty": {
+    "children": []
+  },
+  /* ========================================================================== */
 
+  /* ================================= Top Bar ================================ */
   "flex-layout.row#top-bar": {
     "children": ["flex-layout.col#top-bar"],
     "props": {
@@ -105,7 +121,7 @@
       "verticalAlign": "middle"//,
       // "fullWidth": true
     },
-    "children": ["search-bar"]
+    "children": ["search-bar#search-bar"]
   },
   "flex-layout.col#login": {
     "props": {
@@ -143,6 +159,13 @@
       "height": "80"
     }
   },
+
+  "search-bar#search-bar": {
+    "props": {
+      "blockClass":"search-bar"
+    }
+  },
+
   "header-layout.mobile": {
     "title": "Header - Mobile",
     "children": ["flex-layout.row#top-bar", 

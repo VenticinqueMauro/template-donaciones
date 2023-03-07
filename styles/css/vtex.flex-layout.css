@@ -315,6 +315,42 @@
   color:#ed5395;
 }
 
+.flexRow--footer-logo-container {
+  padding-top:40px;
+  padding-bottom:0px;
+  padding-left:40px;
+  padding-right:40px;
+  text-align:center;
+  /* background-color: lightblue; */
+}
 
+.flexRow--footer-columns-container {
+  padding-left:100px;
+  padding-right:100px;
+  /* background-color:lightgray; */
+}
+
+.flexColChild--footer-payment-methods {
+  text-align:center;
+}
+
+.flexRow--footer-powered-by {
+  padding-top:40px;
+  padding-bottom:0px;
+  padding-right:40px;
+}
+
+.flexColChild--powered-by {
+  padding-left:28px;
+}
+
+.flexCol--footer-column {
+  /* background-color:blue; */
+  height:auto;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--footer-column) {
+  height:auto !important; /* Para alinear los ítems del menú del footer */
+}
 
 /* ========================================================================== */

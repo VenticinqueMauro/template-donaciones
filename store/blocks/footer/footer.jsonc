@@ -1,0 +1,351 @@
+{
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  "footer-layout.desktop": {
+    "children": [
+      "flex-layout.row#footer-logo-container",
+      "flex-layout.row#footer-columns-container"//,
+      // "flex-layout.row#footer-1-desktop",
+      // "flex-layout.row#footer-2-desktop",
+      // "flex-layout.row#footer-3-desktop"
+    ]
+  },
+  "flex-layout.row#footer-1-desktop": {
+    "children": [
+      "vtex.menu@2.x:menu#Products",
+      "vtex.menu@2.x:menu#footer-clothing",
+      "vtex.menu@2.x:menu#footer-decoration",
+      "vtex.menu@2.x:menu#footer-bags",
+      "footer-spacer",
+      "social-networks"
+    ],
+    "props": {
+      "blockClass": "menu-row",
+      "paddingTop": 6,
+      "paddingBottom": 3
+    }
+  },
+
+  /* ============================== Footer Custom ============================= */
+  
+  "flex-layout.row#footer-logo-container": {
+    "children": ["flex-layout.col#footer-logo-container"],
+    "props": {
+      "height":"400",
+      "blockClass": "footer-logo-container"
+    }
+  },
+
+  "flex-layout.col#footer-logo-container": {
+    "children": [
+        "image#footer-logo"
+      ],
+    "props": {
+      "blockClass": "footer-logo-container"
+    }
+  },
+
+  "image#footer-logo": {
+    "props": {
+      "src": "https://ameriedie.vteximg.com.br/arquivos/ids/155396",
+      "maxHeight": 80
+    }
+  },
+
+  "flex-layout.row#footer-columns-container": {
+    "children": ["flex-layout.col#footer-column-1",
+                 "flex-layout.col#footer-column-2",
+                 "flex-layout.col#footer-column-3",
+                 "flex-layout.col#footer-column-4"
+  ],
+    "props": {
+      "height":"",
+      "blockClass": "footer-columns-container"
+    }
+  },
+
+  "flex-layout.col#footer-column-1": {
+    "children": [
+        "rich-text#menu-contacto-title",
+        "vtex.menu@2.x:menu#ContactUs",
+        "flex-layout.row#social-networks"
+      ],
+    "props": {
+      "blockClass": "footer-column"
+    }
+  },
+
+  "flex-layout.col#footer-column-2": {
+    "children": [
+      "rich-text#menu-atencion-title",
+      "vtex.menu@2.x:menu#AtencionCliente"
+      ],
+    "props": {
+      "blockClass": "footer-column"
+    }
+  },
+
+  "flex-layout.col#footer-column-3": {
+    "children": [
+      "rich-text#menu-ayuda-title",
+      "vtex.menu@2.x:menu#Ayuda"
+      ],
+    "props": {
+      "blockClass": "footer-column"
+    }
+  },
+
+  "flex-layout.col#footer-column-4": {
+    "children": [
+      "rich-text#menu-pago-title",
+      "flex-layout.row#payment-methods",
+      "flex-layout.row#powered-by"
+      ],
+    "props": {
+      "blockClass": "footer-column"
+    }
+  },
+
+  "rich-text#menu-contacto-title": {
+    "title":"Título Menú Footer",
+    "props": {
+      "text": "**Contactanos**",
+      "blockClass": "footer-menu-title"
+    }
+  },
+
+  "rich-text#menu-atencion-title": {
+    "title":"Título Menú Footer",
+    "props": {
+      "text": "**Atención al Cliente**",
+      "blockClass": "footer-menu-title"
+    }
+  },
+
+  "rich-text#menu-ayuda-title": {
+    "title":"Título Menú Footer",
+    "props": {
+      "text": "**Ayuda**",
+      "blockClass": "footer-menu-title"
+    }
+  },
+
+  "rich-text#menu-pago-title": {
+    "title":"Título Menú Footer",
+    "props": {
+      "text": "**Medios de Pago**",
+      "blockClass": "footer-menu-title"
+    }
+  },
+
+  "flex-layout.row#payment-methods": {
+    "children": ["flex-layout.col#payment-methods-col-1",
+                 "flex-layout.col#payment-methods-col-2",
+                 "flex-layout.col#payment-methods-col-3"],
+    "props": {
+      "height":"400",
+      "blockClass": "footer-payment-methods"
+    }
+  },
+
+  "flex-layout.col#payment-methods-col-1": {
+    "children": [
+        "image#payment-method-1"
+      ],
+    "props": {
+      "blockClass": "footer-payment-methods"
+    }
+  },
+
+  "flex-layout.col#payment-methods-col-2": {
+    "children": [
+        "image#payment-method-2"
+      ],
+    "props": {
+      "blockClass": "footer-payment-methods"
+    }
+  },
+
+
+  "flex-layout.col#payment-methods-col-3": {
+    "children": [
+        "image#payment-method-3"
+      ],
+    "props": {
+      "blockClass": "footer-payment-methods"
+    }
+  },
+
+
+  "flex-layout.row#powered-by": {
+    "children": ["flex-layout.col#powered-by-col-1",
+                 "flex-layout.col#powered-by-col-2"],
+    "props": {
+      "height":"400",
+      "blockClass": "footer-powered-by"
+    }
+  },
+
+  "flex-layout.col#powered-by-col-1": {
+    "children": [
+      "rich-text#powered-by"
+      ],
+    "props": {
+      "blockClass": "powered-by"
+    }
+  },
+  
+  "flex-layout.col#powered-by-col-2": {
+    "children": [
+      "image#powered-by"
+      ],
+    "props": {
+      "blockClass": ""
+    }
+  },
+
+  "rich-text#powered-by": {
+    "title":"Texto Powered By",
+    "props": {
+      "text": "**Powered By**",
+      "blockClass": ""
+    }
+  },
+
+  "image#payment-method-1": {
+    "props": {
+      "src": "https://www.tecnohs.com.ar/temp-assets/Mastercard-logo.svg.png",
+      "maxHeight": 30
+    }
+  },
+
+  "image#payment-method-2": {
+    "props": {
+      "src": "https://www.tecnohs.com.ar/temp-assets/Visa_2021.svg.png",
+      "maxHeight": 20
+    }
+  },
+
+  "image#payment-method-3": {
+    "props": {
+      "src": "https://www.tecnohs.com.ar/temp-assets/mercadopago-logo.png",
+      "maxHeight": 20
+    }
+  },
+
+  "image#powered-by": {
+    "props": {
+      "src": "https://www.tecnohs.com.ar/temp-assets/logo-red.png",
+      "maxHeight": 60
+    }
+  },
+ 
+  /* ========================================================================== */  
+
+  "flex-layout.row#social-networks": {
+    "children": ["flex-layout.col#social-networks"],
+    "props": {
+      "blockClass": ""
+    }
+  },
+
+  "flex-layout.col#social-networks": {
+    "children": [
+      "social-networks"
+      ],
+    "props": {
+      "blockClass": ""
+    }
+  },
+  
+  "social-networks": {
+    "props": {
+      "blockClass":"social-networks",
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/vtexonline/"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/vtextruecloud/"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/vtexonline"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/user/VTEXTV"
+        }
+      ]
+    }
+  },
+
+  "flex-layout.row#footer-2-desktop": {
+    "children": ["accepted-payment-methods"],
+    "props": {
+      "blockClass": "payment-methods"
+    }
+  },
+  "accepted-payment-methods": {
+    "props": {
+      "paymentMethods": ["MasterCard", "Visa", "Diners Club"]
+    }
+  },
+
+  "flex-layout.row#footer-3-desktop": {
+    "children": ["rich-text#footer"],
+    "props": {
+      "blockClass": "credits"
+    }
+  },
+  "rich-text#footer": {
+    "props": {
+      "text": "All stock and product photos are from photos.icons8.com",
+      "blockClass": "footer"
+    }
+  },
+
+  "footer-layout.mobile": {
+    "children": [
+      "flex-layout.row#1-footer-mobile",
+      "flex-layout.row#2-footer-mobile"
+    ]
+  },
+  "flex-layout.row#2-footer-mobile": {
+    "children": ["flex-layout.col#footer-1-mobile"],
+    "props": {
+      "blockClass": "payment-methods",
+      "paddingTop": 4,
+      "paddingBottom": 4
+    }
+  },
+  "flex-layout.col#footer-1-mobile": {
+    "children": [
+      "accepted-payment-methods",
+      "social-networks",
+      "rich-text#footer-mobile"
+    ],
+    "props": {
+      "blockClass": "payment-methods",
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "rowGap": 4
+    }
+  },
+  "flex-layout.row#1-footer-mobile": {
+    "props": {
+      "paddingTop": 4,
+      "paddingBottom": 4
+    },
+    "children": ["vtex.menu@2.x:menu#footer-mobile"]
+  },
+  "rich-text#footer-mobile": {
+    "props": {
+      "text": "All stock and product photos are from photos.icons8.com",
+      "blockClass": "footer"
+    }
+  }
+}

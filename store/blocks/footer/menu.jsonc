@@ -389,5 +389,183 @@
         "text": "Cropped"
       }
     }
+  },
+
+/* =========================== Menú footer custom =========================== */
+"vtex.menu@2.x:menu#ContactUs": {
+  "props": {
+    "orientation": "vertical",
+    "blockClass":"contact-us"
+  },
+  "children": [
+    "menu-item#telefono",
+    "menu-item#seguinos"
+  ]
+},
+"menu-item#telefono": {
+  "props": {
+    "id": "menu-item-telefono",
+    "type": "custom",
+    "iconId": null,
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "#",
+      "noFollow": false,
+      "tagTitle": "Teléfono",
+      "text": "08010 222 6789"
+    }
   }
+},
+"menu-item#seguinos": {
+  "props": {
+    "id": "menu-item-seguinos",
+    "type": "custom",
+    "iconId": null,
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "#",
+      "noFollow": false,
+      "tagTitle": "Seguinos",
+      "text": "Seguinos"
+    }
+  }
+},
+
+"vtex.menu@2.x:menu#AtencionCliente": {
+  "props": {
+    "orientation": "vertical"
+  },
+  "children": [
+    "menu-item#terminos-y-condiciones",
+    "menu-item#cambios-y-devoluciones",
+    "menu-item#nosotros",
+    "menu-item#condiciones-de-envio"
+  ]
+},
+"menu-item#terminos-y-condiciones": {
+  "props": {
+    "id": "menu-item-terminos-y-condiciones",
+    "type": "custom",
+    "iconId": null,
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "#",
+      "noFollow": false,
+      "tagTitle": "Términos y condiciones",
+      "text": "Términos y condiciones"
+    }
+  }
+},
+"menu-item#nosotros": {
+  "props": {
+    "id": "menu-item-nosotros",
+    "type": "custom",
+    "iconId": null,
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "#",
+      "noFollow": false,
+      "tagTitle": "Nosotros",
+      "text": "Nosotros"
+    }
+  }
+},
+"menu-item#cambios-y-devoluciones": {
+  "props": {
+    "id": "menu-item-cambios-y-devoluciones",
+    "type": "custom",
+    "iconId": null,
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "#",
+      "noFollow": false,
+      "tagTitle": "Cambios y Devoluciones",
+      "text": "Cambios y Devoluciones"
+    }
+  }
+},
+"menu-item#condiciones-de-envio": {
+  "props": {
+    "id": "menu-item-condiciones-de-envio",
+    "type": "custom",
+    "iconId": null,
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "#",
+      "noFollow": false,
+      "tagTitle": "Condiciones de envio",
+      "text": "Condiciones de envio"
+    }
+  }
+},
+
+
+"vtex.menu@2.x:menu#Ayuda": {
+  "props": {
+    "orientation": "vertical"
+  },
+  "children": [
+    "menu-item#preguntas-frecuentes",
+    "menu-item#como-comprar",
+    "menu-item#mis-pedidos",
+    "menu-item#condiciones-de-envio"
+  ]
+},
+
+"menu-item#preguntas-frecuentes": {
+  "props": {
+    "id": "menu-item-preguntas-frecuentes",
+    "type": "custom",
+    "iconId": null,
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "#",
+      "noFollow": false,
+      "tagTitle": "Preguntas Frecuentes",
+      "text": "Preguntas Frecuentes"
+    }
+  }
+},
+
+"menu-item#como-comprar": {
+  "props": {
+    "id": "menu-item-como-comprar",
+    "type": "custom",
+    "iconId": null,
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "#",
+      "noFollow": false,
+      "tagTitle": "Como Comprar",
+      "text": "Como Comprar"
+    }
+  }
+},
+
+"menu-item#mis-pedidos": {
+  "props": {
+    "id": "menu-item-mis-pedidos",
+    "type": "custom",
+    "iconId": null,
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "#",
+      "noFollow": false,
+      "tagTitle": "Mis Pedidos",
+      "text": "Mis Pedidos"
+    }
+  }
+}
+
+/* ========================================================================== */
+
 }

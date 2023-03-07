@@ -155,6 +155,23 @@
   max-width:100px;
 }
 
+.searchBarIcon--search {
+  /* color:white; */
+  /* margin-left:10px; */
+}
+
+:global(.vtex-input__suffix) {
+  /* background-color:blueviolet; */
+}
+
+.productBrandContainer--marca-style {
+  /* background-color:lightgray; */
+  width:auto;
+}
+
+.imageElement--footer-logo {
+  width:500px;
+}
 
 /* ========================================================================== */
 
