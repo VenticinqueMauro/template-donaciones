@@ -1,5 +1,11 @@
 {
   "product-specification-group#table": {
+    "props":{
+      "filter": {
+        "specificationGroups":"Principal",
+        "type":"hide"
+        }
+    },
     "children": [
       "flex-layout.row#spec-group"
     ]
@@ -79,5 +85,53 @@
     "props": {
       "message": "{specificationValue}"
     }
+  },
+  
+
+  /* ================== Product Specification para right-col ================== */
+
+  "product-specification-group#rcol": {
+    "props":{
+      "filter": {
+        "specificationGroups":"Principal",
+        "type":"show"
+        }
+    },
+    "children": [
+      "flex-layout.row#rcol"
+    ]
+  }, 
+
+  "flex-layout.row#rcol": {
+    "props": {
+      "blockClass": "productSpecificationGroup"
+    },
+    "children": [
+      "flex-layout.col#rcol"
+    ]
+  },
+  "flex-layout.col#rcol": {
+    "children": [
+      "product-specification#rcol"
+    ]
+  },
+
+  "product-specification#rcol": {
+    "children": [
+      "flex-layout.row#spec-item-rcol"
+    ]
+  },
+
+  "flex-layout.row#spec-item-rcol": {
+    "props": {
+      "blockClass": "productSpecificationRightCol"
+    },
+    "children": [
+      "flex-layout.col#spec-name",
+      "flex-layout.col#spec-value"
+    ]
   }
+
+   
+  /* ========================================================================== */
 }

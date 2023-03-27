@@ -11,6 +11,12 @@
   padding: 1rem;
 }
 
+.flexCol--productSpecificationNameRightCol {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+   
+}
+
 .flexCol--productSpecificationValue {
   padding: 1rem 1rem 1rem 0;
 }

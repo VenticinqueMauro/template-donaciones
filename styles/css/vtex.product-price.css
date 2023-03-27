@@ -10,7 +10,8 @@
 }
 
 .sellingPriceValue {
-  font-size: 2.25rem;
+  font-size: 24px;
+  /* font-size: 2.25rem; */
   font-weight: 700;
 }
 
@@ -81,3 +82,28 @@
   color: #FFFFFF;
   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
 }
+
+/* ========================== Customización precios ========================= */
+
+.savings--price-savings {
+  /* color:#ed5395; */
+  /* margin:6px; */
+  margin-left:10px;
+  font-size:24px;
+  font-weight: bold;
+}
+
+.listPrice--list-price {
+  /* color:#ed5395; */
+  font-size:24px;
+  margin-right:16px;
+}
+
+.sellingPrice--selling-price {
+  /* font-size:16px !important; */
+  /* color:#ed5395; */
+  /* margin-left:16px; */
+  margin-right:4px;
+}
+
+/* ========================================================================== */

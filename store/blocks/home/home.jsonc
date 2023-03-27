@@ -740,7 +740,7 @@
   "blocks": ["product-summary.shelf"],
   "children": ["slider-layout#shelf-04"],
   "props": {
-    // "category":"3",
+    "category":"5",
     "orderBy": "OrderByTopSaleDESC"
   }
 },

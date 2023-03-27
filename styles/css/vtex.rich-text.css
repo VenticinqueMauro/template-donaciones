@@ -107,6 +107,27 @@
   margin:6px;
 }
 
+.paragraph--influencer-name-text { 
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin:6px;
+}
+
+.link--influencer-name-text {
+  text-decoration: none;
+  font-weight: bold;
+  color:#f55a32;
+}
+
+.paragraph--best-selling {
+  font-weight: bold;
+  color:#f55a32;
+}
+
+.paragraph--separator {
+  color:gray;
+}
+
 .paragraph--div-datos-influencer {
   font-family: 'Montserrat', sans-serif;
 }
@@ -143,6 +164,28 @@
 
 .container--powered-by {
   padding-left:24px;
+}
+
+.paragraph--compra-segura {
+  /* background-color: red; */
+  line-height: 1.4em;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+.container--compra-segura {
+  /* margin-top:0px; */
+  /* margin-bottom:0px; */
+}
+
+.paragraph--medios-de-pago-link {
+  cursor: pointer;
+  text-decoration:underline;
+  font-weight: bold;
+}
+
+.paragraph--medios-de-pago-contenido {
+  padding:30px;
 }
 
 /* ========================================================================== */

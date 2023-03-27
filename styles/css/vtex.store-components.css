@@ -164,9 +164,14 @@
   /* background-color:blueviolet; */
 }
 
+.productBrandName--marca-style {
+  /* background-color:red; */
+  color: #979899;
+  font-size: 18px;
+}
+
 .productBrandContainer--marca-style {
-  /* background-color:lightgray; */
-  width:auto;
+  align-self: center;
 }
 
 .imageElement--footer-logo {
@@ -175,3 +180,146 @@
 
 /* ========================================================================== */
 
+/* ==================== Shipping Simulator - Custom style =================== */
+
+/* Seguir acá, limpiar lo que está de mas */
+
+.shippingContainer {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  margin: 15px 0;
+}
+
+.shippingContainer
+  :global(.vtex-address-form__postalCode)
+  :last-child:not(:global(.vtex-input-prefix__group)):not(:global(.vtex-input__suffix)) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: max-content;
+  color: #888C8A;
+  line-height: 12px;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.shippingContainer :global(.vtex-address-form__postalCode) {
+  /*max-width: 240px;*/
+  padding-bottom: 0;
+}
+
+.shippingContainer :global(.vtex__icon-external-link) {
+  display: none;
+}
+
+.shippingContainer :global(.vtex-input-prefix__group) {
+  border: 1px solid #c8ccca;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 40px;
+}
+
+.shippingContainer :global(.vtex-address-form-4-x-input) {
+  padding: 0 0 0 0px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 700;
+  color: #888C8A;
+}
+
+.shippingContainer :global(.vtex-input__suffix) {
+  padding: 0 0px 0 0;
+}
+
+.shippingContainer :global(.vtex-button) {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  transition: 0.2s all;
+  /*max-width: 280px;*/
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+/*
+.shippingContainer :global(.vtex-button):hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+*/
+.shippingContainer :global(.vtex-button__label) {
+  background: #fff;
+  height: 40px;
+  /* font-family: Nunito; */
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: #888c8a;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /*max-width: 280px;/*/
+  background-color: #c8ccca;
+  padding: 0px;
+}
+/*
+.shippingContainer :global(.vtex-button__label):hover {
+  width: 100%;
+  background: #fff;
+  border: none;
+  filter: drop-shadow(0px 3px 12px rgba(0, 0, 0, 0.15));
+  text-transform: uppercase;
+  color: #ed1c24;
+}
+*/
+
+:global(.vtex-store-components-3-x-shippingConteiner){
+  font-size: 11px;
+}
+
+
+:global(.vtex-store-components-3-x-shippingTableLabel){
+  font-size: 11px;
+}
+
+:global(.vtex-store-components-3-x-imageElement--collection-panel-img){
+  width: 100%;
+}
+
+:global(.vtex-store-components-3-x-imageElement--medios-pago-img){
+  width: 50%;
+}
+
+@media only screen and (max-width: 375px) {
+  .shippingContainer :global(.vtex-input__label)::before {
+    font-size: 10px;
+  }
+}
+
+.shippingTableRadioBtn {
+  visibility: hidden;
+}
+
+.diagonalCross {
+  background-image: url("/arquivos/sin-stock.svg");
+  border: 2px solid #C81932;
+}
+
+.frameAround {
+  border: none;
+}
+
+.imageElement--compra-segura {
+  padding-top:6px;
+  padding-right:20px;
+}
+
+.imageElement--medios-de-pago {
+  padding-top:10px;
+  padding-right:20px;
+  cursor:pointer;
+}
+
+/* ========================================================================== */

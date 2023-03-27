@@ -21,7 +21,35 @@
     },
     "children": [
       "product-list-price",
+      "product-selling-price",
       "product-price-savings"
     ]
+  },
+
+  
+  /* ================================= Precios ================================ */
+
+  "product-list-price": {
+    "props":{
+      "blockClass":"list-price"
+    }
+  },
+
+  "product-price-savings": {
+    "props":{
+      "blockClass":"price-savings",
+      "percentageStyle":"locale",
+      "markers": ["discount"],
+      "message": "<discount>{savingsPercentage} OFF</discount>"
+    }
+  },
+
+  "product-selling-price": {
+    "props":{
+      "blockClass":"selling-price"
+    }
   }
+
+  /* ========================================================================== */
+
 }

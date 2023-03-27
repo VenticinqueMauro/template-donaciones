@@ -10,7 +10,9 @@
   },
   "header-layout.desktop": {
     "title": "Header - Desktop",
-    "children": ["flex-layout.row#top-bar", 
+    "children": [
+                 "flex-layout.row#influencer-name-bar",
+                 "flex-layout.row#top-bar", 
                  "sticky-layout#4-desktop"]
   },
 
@@ -26,6 +28,34 @@
   },
   "header-layout.mobile#empty": {
     "children": []
+  },
+  /* ========================================================================== */
+
+  /* ============================= Influencer Name ============================ */
+  "flex-layout.row#influencer-name-bar": {
+    "children": ["flex-layout.col#influencer-name-bar"],
+    "props": {
+      "fullWidth": true,
+      "blockClass": "influencer-name"
+    }
+  },
+
+  "flex-layout.col#influencer-name-bar": {
+    "title":"InfluencerName",
+    "children": ["rich-text#influencer-name-bar"],
+    "props": {
+      "fullWidth": true
+    }
+  },
+
+  "rich-text#influencer-name-bar": {
+    "title":"Texto InfluencerName",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Estás en la tienda oficial: [Stephanie Demner](#)",
+      "blockClass": "influencer-name-text"
+    }
   },
   /* ========================================================================== */
 
