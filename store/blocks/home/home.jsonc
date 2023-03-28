@@ -454,14 +454,14 @@
       "blockClass": "shelf-01-col-1"
     },
     "children" : [
-      "disposition-layout#image-and-video"
+      "disposition-layout#image-and-video-01"
     ]
   },
 
-  "disposition-layout#image-and-video": {
+  "disposition-layout#image-and-video-01": {
     "title":"Shelf#1 - Imagen o video",
     "children": [
-      "image#shelf-01-col-01",
+      // "image#shelf-01-col-01",
       "video#shelf-01-col-01"
     ],
     "props": {
