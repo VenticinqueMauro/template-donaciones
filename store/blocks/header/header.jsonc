@@ -162,6 +162,13 @@
     },
     "children": ["login"]
   },
+
+  "login": {
+    "props": {
+      "blockClass":"login-button"
+    }
+  },
+
   "flex-layout.col#cart": {
     "props": {
       "width":"10%",

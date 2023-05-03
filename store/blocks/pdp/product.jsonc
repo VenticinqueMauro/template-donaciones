@@ -1,9 +1,29 @@
 {
+  
   "store.product": {
+    "parent": { 
+      "header": "header#header", 
+      "footer": "footer#empty"
+    },
+    "blocks":[      
+      "store.custom#{influencer-pdp}"
+    ]
+  },
+
+  "store.custom#{influencer-pdp}": {
+    "blocks": [  
+      "responsive-layout.desktop#pdp",
+      "responsive-layout.phone#pdp"
+    ]
+  },
+  
+  /* =============================== PDP Desktop ============================== */
+
+  "responsive-layout.desktop#pdp": {
     "children": [
       "flex-layout.row#product-breadcrumb",
       "flex-layout.row#compra-segura",
-      "condition-layout.product#availability",
+      "condition-layout.product#availability-desktop",
       "flex-layout.row#description",
       "flex-layout.row#specifications-title",
       "product-specification-group#table",
@@ -13,6 +33,25 @@
     ]
   },
 
+  /* ================================ PDP Phone =============================== */
+
+  "responsive-layout.phone#pdp": {
+    "children": [
+      "flex-layout.row#product-breadcrumb",
+      "flex-layout.row#compra-segura",
+      "condition-layout.product#availability-phone",
+      "flex-layout.row#description",
+      "flex-layout.row#specifications-title",
+      "product-specification-group#table",
+      "shelf.relatedProducts",
+      "product-reviews",
+      "product-questions-and-answers"
+    ]
+  },
+
+
+  /* ========================= Product Specifications ========================= */
+  
   "flex-layout.row#specifications-title": {
     "children": ["rich-text#specifications"]
   },
@@ -78,18 +117,32 @@
     },
     "children": ["product-description"]
   },
-  "condition-layout.product#availability": {
+  
+  "condition-layout.product#availability-desktop": {
     "props": {
       "conditions": [
         {
           "subject": "isProductAvailable"
         }
       ],
-      "Then": "flex-layout.row#product-main",
+      "Then": "flex-layout.row#product-main-desktop",
       "Else": "flex-layout.row#product-availability"
     }
   },
-  "flex-layout.row#product-main": {
+  
+  "condition-layout.product#availability-phone": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#product-main-phone",
+      "Else": "flex-layout.row#product-availability"
+    }
+  },
+
+  "flex-layout.row#product-main-desktop": {
     "props": {
       "colGap": 7,
       "rowGap": 7,
@@ -98,7 +151,21 @@
       "paddingTop": 7,
       "paddingBottom": 7
     },
-    "children": ["flex-layout.col#stack", "flex-layout.col#right-col"]
+    "children": ["flex-layout.col#stack", 
+                 "flex-layout.col#right-col-desktop"]
+  },
+
+  "flex-layout.row#product-main-phone": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7,
+      "paddingBottom": 7
+    },
+    "children": ["flex-layout.col#stack", 
+                 "flex-layout.col#right-col-phone"]
   },
 
   "stack-layout": {
@@ -140,25 +207,47 @@
       "displayThumbnailsArrows": true
     }
   },
-  "flex-layout.col#right-col": {
+  
+  "flex-layout.col#right-col-desktop": {
     "props": {
       "preventVerticalStretch": true,
       "rowGap": 0
     },
     "children": [
-      "flex-layout.row#brand-stock",
+      "flex-layout.row#brand-stock-desktop",
       "flex-layout.row#product-name",
       "product-specification-group#rcol",
       "product-rating-summary",
       "flex-layout.row#list-price-savings",
-      // "flex-layout.row#selling-price",
-      // "similar-products-variants#productos-similares",
       "product-installments",
       "product-separator",
       "product-identifier.product",
       "flex-layout.row#sku-selector-quantity",
-      // "sku-selector",
-      // "product-quantity",
+      "product-assembly-options",
+      "product-gifts",
+      "flex-layout.row#buy-button",
+      "availability-subscriber",
+      "shipping-simulator",
+      "modal-trigger#medios-de-pago",
+      "share#default"
+    ]
+  },
+
+  "flex-layout.col#right-col-phone": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0
+    },
+    "children": [
+      "flex-layout.row#brand-stock-phone",
+      "flex-layout.row#product-name",
+      "product-specification-group#rcol",
+      "product-rating-summary",
+      "flex-layout.row#list-price-savings",
+      "product-installments",
+      "product-separator",
+      "product-identifier.product",
+      "flex-layout.row#sku-selector-quantity",
       "product-assembly-options",
       "product-gifts",
       "flex-layout.row#buy-button",
@@ -225,13 +314,15 @@
     "props":{
       "blockClass": "sku-selector-quantity"
     },
-    "children": ["flex-layout.col#sku-selector",
-                 "flex-layout.col#quantity"]
+    "children": ["flex-layout.col#quantity",
+                 "flex-layout.col#sku-selector",
+                 "flex-layout.col#spacer"
+                ]
   },
 
   "flex-layout.col#sku-selector": {
     "props":{
-      "width":"35%",
+      "width":"auto",
       "blockClass": "sku-selector"
     },
     "children": ["sku-selector"]
@@ -239,10 +330,17 @@
 
   "flex-layout.col#quantity": {
     "props":{
-      "width":"65%",
+      "width":"20%",
       "blockClass": "quantity"
     },
     "children": ["product-quantity#quantity-selector"]
+  }, 
+
+  "flex-layout.col#spacer": {
+    "props":{
+      "width":"auto"
+    },
+    "children": []
   }, 
 
 
@@ -260,15 +358,26 @@
     }
   },
 
-  "flex-layout.row#brand-stock": {
+  "flex-layout.row#brand-stock-desktop": {
     "props": {
       "marginBottom": 3,
-      "blockClass":"brand-stock"
+      "blockClass":"brand-stock-desktop"
     },
     "children": ["vtex.store-components:product-brand#marca",
                  "rich-text#separator",
-                 "rich-text#best-selling",
-                 "product-availability#product-stock"]
+                "vtex.product-highlights@2.x:product-highlights#best-selling-item-desktop",
+                "product-availability#product-stock"]
+  },
+
+  "flex-layout.row#brand-stock-phone": {
+    "props": {
+      "marginBottom": 3,
+      "blockClass":"brand-stock-phone"
+    },
+    "children": ["vtex.store-components:product-brand#marca",
+                //  "rich-text#separator",
+                "vtex.product-highlights@2.x:product-highlights#best-selling-item-phone",
+                "product-availability#product-stock"]
   },
 
   
@@ -282,7 +391,8 @@
 
   "vtex.store-components:product-brand#marca": {
     "props":{
-      "blockClass":"marca-style"
+      "blockClass":"marca-style",
+      "displayMode":"text"
     }
   },
 
@@ -309,8 +419,7 @@
   "product-availability#product-stock": {
     "props": {
       "showAvailability": "stock",
-      // "showAvailabilityMessage": " | {quantity} disponibles",
-      "showAvailabilityMessage": " ({quantity} disponibles)",
+      "showAvailabilityMessage": "({quantity} disponibles)",
       "blockClass": "product-stock"
     }
   },
@@ -324,6 +433,7 @@
 
   "sku-selector": {
     "props": {
+      "blockClass":"sku-selector",
       "variationsSpacing": 3,
       "showValueNameForImageVariation": true
     }
@@ -331,10 +441,18 @@
 
   "flex-layout.row#buy-button": {
     "props": {
+      "blockClass":"buy-button",
       "marginTop": 4,
       "marginBottom": 7
     },
-    "children": ["add-to-cart-button"]
+    "children": ["add-to-cart-button#pdp-buy-button"]
+  },
+
+  "add-to-cart-button#pdp-buy-button": {
+    "props": {
+      "text": "Comprar",
+      "blockClass": "pdp-buy-button"
+    }
   },
 
   "flex-layout.row#product-availability": {
@@ -378,5 +496,76 @@
         "Pinterest": true
       }
     }
+  },
+
+  /* ========================== Leyenda "Más vendido" ========================= */
+
+  // "flex-layout.row#best-selling": {
+  //   "props": {
+  //     "blockClass": ["best-selling"],
+  //     "colSizing": "auto",
+  //     "preserveLayoutOnMobile": true
+  //   },
+
+  //   "children": [
+  //     "vtex.product-highlights@2.x:product-highlights#best-selling-item"
+  //   ]
+  // },
+
+  "vtex.product-highlights@2.x:product-highlights#best-selling-item-desktop": {
+    "props": {
+      "blockClass": ["best-selling-desktop"],
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Más vendido"]
+      }
+    },
+    "children": ["product-highlight-wrapper#best-selling-item-desktop"]
+  },
+
+  "product-highlight-wrapper#best-selling-item-desktop": {
+    "props": {
+      "blockClass": ["best-selling-desktop"]
+    },
+    "children": ["product-highlight-text#best-selling-item-desktop"]
+  },
+
+  "product-highlight-text#best-selling-item-desktop": {
+    "props": {
+      "blockClass": ["best-selling-desktop"],
+      "message": "{highlightName}"
+    }
+  },
+  
+  
+  
+  "vtex.product-highlights@2.x:product-highlights#best-selling-item-phone": {
+    "props": {
+      "blockClass": ["best-selling-phone"],
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Más vendido"]
+      }
+    },
+    "children": ["product-highlight-wrapper#best-selling-item-phone"]
+  },
+
+"product-highlight-wrapper#best-selling-item-phone": {
+    "props": {
+      "blockClass": ["best-selling-phone"]
+    },
+    "children": ["product-highlight-text#best-selling-item-phone"]
+  },
+
+  "product-highlight-text#best-selling-item-phone": {
+    "props": {
+      "blockClass": ["best-selling-phone"],
+      "message": "{highlightName}"
+    }
   }
+
+  
+
 }

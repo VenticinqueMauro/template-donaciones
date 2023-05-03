@@ -10,3 +10,35 @@
   border-radius: 20px;
   padding: 5px 10px;
 }
+
+.productHighlightText--best-selling-desktop {
+  background: transparent;
+  font-weight: bold;
+  color:#f55a32;
+  align-self: center;
+}
+
+.productHighlightText--best-selling-phone {
+  background: transparent;
+  font-weight: bold;
+  color:#f55a32;
+    padding-left:0px;
+  /* align-self: center; */
+}
+
+/* .productHighlightWrapper--best-selling {
+  display:flex;
+  justify-content: center;
+} */
+
+.productHighlightWrapper--best-selling-desktop {
+  display:flex;
+  justify-content: center;
+}
+
+.productHighlightWrapper--best-selling-phone {
+  margin-top:20px;
+  /* display:flex; */
+  /* justify-content: left; */
+  /* background-color: red; */
+}

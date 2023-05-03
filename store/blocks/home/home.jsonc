@@ -461,7 +461,7 @@
   "disposition-layout#image-and-video-01": {
     "title":"Shelf#1 - Imagen o video",
     "children": [
-      // "image#shelf-01-col-01",
+      "image#shelf-01-col-01",
       "video#shelf-01-col-01"
     ],
     "props": {
@@ -477,7 +477,7 @@
   },
 
   "video#shelf-01-col-01": {
-    "title":"Imagen Video #1",
+    "title":"Video Shelf #1",
     "props": {
       "width": "auto",
       "height": "466px",
@@ -740,7 +740,8 @@
   "blocks": ["product-summary.shelf"],
   "children": ["slider-layout#shelf-04"],
   "props": {
-    "category":"5",
+    // "category":"6",
+    "collection":"139",
     "orderBy": "OrderByTopSaleDESC"
   }
 },

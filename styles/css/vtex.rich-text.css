@@ -126,6 +126,8 @@
 
 .paragraph--separator {
   color:gray;
+  font-size:18px;
+  padding-bottom:2px;
 }
 
 .paragraph--div-datos-influencer {

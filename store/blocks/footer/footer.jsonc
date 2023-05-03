@@ -6,10 +6,7 @@
   "footer-layout.desktop": {
     "children": [
       "flex-layout.row#footer-logo-container",
-      "flex-layout.row#footer-columns-container"//,
-      // "flex-layout.row#footer-1-desktop",
-      // "flex-layout.row#footer-2-desktop",
-      // "flex-layout.row#footer-3-desktop"
+      "flex-layout.row#footer-columns-container"
     ]
   },
   "flex-layout.row#footer-1-desktop": {

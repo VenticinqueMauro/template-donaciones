@@ -359,9 +359,15 @@
 }
 
 
-.flexRow--brand-stock :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+.flexRow--brand-stock-desktop :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
   display:flex;
   width:auto !important;
+}
+
+.flexRow--brand-stock-phone :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+  display:flex;
+  width:auto !important;
+  /* background-color: red; */
 }
 
 .flexRow--sku-selector-quantity {
@@ -395,6 +401,36 @@
   /* background-color: green; */
 }
 
+.flexCol--productSpecificationNameRCol {
+  padding-top:6px;
+  color: #3f3f40;
+  /* background-color:red; */
+}
 
+.flexCol--productSpecificationValueRCol {
+  padding-top:6px;
+  color: #3f3f40;
+  font-weight: bold;
+  /* background-color:orange; */
+}
+
+.flexRow--buy-button :global(.vtex-flex-layout-0-x-stretchChildrenWidth){
+
+  justify-content: flex-start;
+  
+}
+
+.flexRow--buy-button :global(.vtex-button) {
+  background-color: #f45a30;
+  border: 1px solid #f45a30;
+  border-radius: 30px;
+  text-transform: capitalize;
+  width:auto;
+  
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
 
 /* ========================================================================== */

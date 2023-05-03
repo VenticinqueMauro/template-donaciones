@@ -127,8 +127,30 @@
       "blockClass": "productSpecificationRightCol"
     },
     "children": [
-      "flex-layout.col#spec-name",
-      "flex-layout.col#spec-value"
+      "flex-layout.col#spec-name-rcol",
+      "flex-layout.col#spec-value-rcol"
+    ]
+  },
+
+  "flex-layout.col#spec-name-rcol": {
+    "props": {
+      "blockClass": "productSpecificationNameRCol",
+      "width": {
+        "mobile": "18%",
+        "desktop": "18%"
+      }
+    },
+    "children": [
+      "product-specification-text#specification"
+    ]
+  },
+
+  "flex-layout.col#spec-value-rcol": {
+    "props": {
+      "blockClass": "productSpecificationValueRCol"
+    },
+    "children": [
+      "product-specification-values"
     ]
   }
 

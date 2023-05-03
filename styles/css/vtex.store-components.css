@@ -322,4 +322,23 @@
   cursor:pointer;
 }
 
+.skuSelectorName {
+  
+  font-family: San Francisco,-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1rem;
+  color: #979899;
+  padding-top:0px;
+  padding-bottom:0px;
+}
+
+.skuSelectorTextContainer {
+  /* background-color: green; */
+  padding-top:6px;
+  padding-bottom:0px;
+  margin-bottom:0px;
+}
+
 /* ========================================================================== */
